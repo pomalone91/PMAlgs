@@ -8,12 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		25F9325521781D4F00FC72D6 /* PMAlgs.h in Headers */ = {isa = PBXBuildFile; fileRef = 25F9325321781D4F00FC72D6 /* PMAlgs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25F9325C21781D6000FC72D6 /* PMUnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F9325B21781D6000FC72D6 /* PMUnionFind.swift */; };
+		25F9326821781FEC00FC72D6 /* PMAlgsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F9326721781FEC00FC72D6 /* PMAlgsTests.swift */; };
+		25F9326A21781FEC00FC72D6 /* PMAlgs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F9325021781D4F00FC72D6 /* PMAlgs.framework */; };
+		25F932812178B3DC00FC72D6 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F932802178B3DC00FC72D6 /* Errors.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		25F9326B21781FEC00FC72D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25F9324721781D4F00FC72D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25F9324F21781D4F00FC72D6;
+			remoteInfo = PMAlgs;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		25F9325021781D4F00FC72D6 /* PMAlgs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PMAlgs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25F9325321781D4F00FC72D6 /* PMAlgs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMAlgs.h; sourceTree = "<group>"; };
 		25F9325421781D4F00FC72D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25F9325B21781D6000FC72D6 /* PMUnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMUnionFind.swift; sourceTree = "<group>"; };
+		25F9326521781FEC00FC72D6 /* PMAlgsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMAlgsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25F9326721781FEC00FC72D6 /* PMAlgsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMAlgsTests.swift; sourceTree = "<group>"; };
+		25F9326921781FEC00FC72D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25F932802178B3DC00FC72D6 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +43,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		25F9326221781FEC00FC72D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25F9326A21781FEC00FC72D6 /* PMAlgs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -31,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				25F9325221781D4F00FC72D6 /* PMAlgs */,
+				25F9326621781FEC00FC72D6 /* PMAlgsTests */,
 				25F9325121781D4F00FC72D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				25F9325021781D4F00FC72D6 /* PMAlgs.framework */,
+				25F9326521781FEC00FC72D6 /* PMAlgsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,8 +77,19 @@
 			children = (
 				25F9325321781D4F00FC72D6 /* PMAlgs.h */,
 				25F9325421781D4F00FC72D6 /* Info.plist */,
+				25F9325B21781D6000FC72D6 /* PMUnionFind.swift */,
+				25F932802178B3DC00FC72D6 /* Errors.swift */,
 			);
 			path = PMAlgs;
+			sourceTree = "<group>";
+		};
+		25F9326621781FEC00FC72D6 /* PMAlgsTests */ = {
+			isa = PBXGroup;
+			children = (
+				25F9326721781FEC00FC72D6 /* PMAlgsTests.swift */,
+				25F9326921781FEC00FC72D6 /* Info.plist */,
+			);
+			path = PMAlgsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,16 +124,39 @@
 			productReference = 25F9325021781D4F00FC72D6 /* PMAlgs.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		25F9326421781FEC00FC72D6 /* PMAlgsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25F9326D21781FEC00FC72D6 /* Build configuration list for PBXNativeTarget "PMAlgsTests" */;
+			buildPhases = (
+				25F9326121781FEC00FC72D6 /* Sources */,
+				25F9326221781FEC00FC72D6 /* Frameworks */,
+				25F9326321781FEC00FC72D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25F9326C21781FEC00FC72D6 /* PBXTargetDependency */,
+			);
+			name = PMAlgsTests;
+			productName = PMAlgsTests;
+			productReference = 25F9326521781FEC00FC72D6 /* PMAlgsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		25F9324721781D4F00FC72D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Paul Malone";
 				TargetAttributes = {
 					25F9324F21781D4F00FC72D6 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+					};
+					25F9326421781FEC00FC72D6 = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
@@ -111,12 +174,20 @@
 			projectRoot = "";
 			targets = (
 				25F9324F21781D4F00FC72D6 /* PMAlgs */,
+				25F9326421781FEC00FC72D6 /* PMAlgsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		25F9324E21781D4F00FC72D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25F9326321781FEC00FC72D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -130,10 +201,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F932812178B3DC00FC72D6 /* Errors.swift in Sources */,
+				25F9325C21781D6000FC72D6 /* PMUnionFind.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25F9326121781FEC00FC72D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25F9326821781FEC00FC72D6 /* PMAlgsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		25F9326C21781FEC00FC72D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25F9324F21781D4F00FC72D6 /* PMAlgs */;
+			targetProxy = 25F9326B21781FEC00FC72D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		25F9325621781D4F00FC72D6 /* Debug */ = {
@@ -260,6 +349,7 @@
 		25F9325921781D4F00FC72D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -279,6 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = stroggi.PMAlgs;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -286,6 +377,7 @@
 		25F9325A21781D4F00FC72D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -309,6 +401,42 @@
 			};
 			name = Release;
 		};
+		25F9326E21781FEC00FC72D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T3Q6UYT2K5;
+				INFOPLIST_FILE = PMAlgsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = stroggi.PMAlgsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		25F9326F21781FEC00FC72D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T3Q6UYT2K5;
+				INFOPLIST_FILE = PMAlgsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = stroggi.PMAlgsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -326,6 +454,15 @@
 			buildConfigurations = (
 				25F9325921781D4F00FC72D6 /* Debug */,
 				25F9325A21781D4F00FC72D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25F9326D21781FEC00FC72D6 /* Build configuration list for PBXNativeTarget "PMAlgsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25F9326E21781FEC00FC72D6 /* Debug */,
+				25F9326F21781FEC00FC72D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
