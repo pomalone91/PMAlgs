@@ -19,7 +19,12 @@ class PMCollectionsTest: XCTestCase {
         stringStack.push(item: "Second")
         stringStack.push(item: "Third")
         
-//        var intStack = Stack<Int>()
+        intStack.push(item: 510)
+        intStack.push(item: 345)
+        intStack.push(item: 55734858310)
+        intStack.push(item: -4334510)
+        intStack.push(item: 4333333510)
+        intStack.push(item: 1)
         
     }
 
@@ -27,19 +32,31 @@ class PMCollectionsTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
+    // MARK: Stack
+    
     // Stack tests
     func testPush() {
         XCTAssert(stringStack.peek() == "Third")
         XCTAssert(stringStack.peek() != "Second")
         XCTAssert(stringStack.peek() != "First")
+        
+        XCTAssertEqual(intStack.peek(), 1)
+        
     }
     
     func testPop() {
         setUp()
         
-        let string = stringStack.pop()
-        XCTAssert(string == "Third")
-        XCTAssert(stringStack.peek() == "Second")
-        XCTAssert(stringStack.peek() != "First")
+        var string = stringStack.pop()
+        XCTAssertEqual(string, "Third")
+        
+        string = stringStack.pop()
+        XCTAssertEqual(string, "Second")
+        
+        let int = intStack.pop()
+        XCTAssertEqual(int, 1)
+        XCTAssertEqual(intStack.peek(), 4333333510)
     }
+    
+    // MARK: Queue
 }

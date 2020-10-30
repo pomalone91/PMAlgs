@@ -9,7 +9,7 @@
 import Foundation
 
 // Stack implementation
-public class Stack<Element> {
+public struct Stack<Element> {
     var isEmpty: Bool {
         stack.isEmpty
     }
@@ -18,12 +18,12 @@ public class Stack<Element> {
     }
     var stack = [Element]()
     
-    func push(item: Element) {
+    mutating func push(item: Element) {
         // Push new item onto stack
         stack.append(item)
     }
     
-    func pop() -> Element? {
+    mutating func pop() -> Element? {
         // Pop new item off the stack
         return stack.removeLast()
     }
