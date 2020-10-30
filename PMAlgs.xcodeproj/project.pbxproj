@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2531F062254C7FF8003A855E /* PMCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2531F061254C7FF8003A855E /* PMCollections.swift */; };
+		2531F064254CA84A003A855E /* PMCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2531F063254CA84A003A855E /* PMCollections.swift */; };
 		25F9325521781D4F00FC72D6 /* PMAlgs.h in Headers */ = {isa = PBXBuildFile; fileRef = 25F9325321781D4F00FC72D6 /* PMAlgs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25F9325C21781D6000FC72D6 /* PMUnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F9325B21781D6000FC72D6 /* PMUnionFind.swift */; };
 		25F9326821781FEC00FC72D6 /* PMAlgsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F9326721781FEC00FC72D6 /* PMAlgsTests.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		2531F061254C7FF8003A855E /* PMCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMCollections.swift; sourceTree = "<group>"; };
+		2531F063254CA84A003A855E /* PMCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMCollections.swift; sourceTree = "<group>"; };
 		25F9325021781D4F00FC72D6 /* PMAlgs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PMAlgs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25F9325321781D4F00FC72D6 /* PMAlgs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMAlgs.h; sourceTree = "<group>"; };
 		25F9325421781D4F00FC72D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				25F9326721781FEC00FC72D6 /* PMAlgsTests.swift */,
+				2531F063254CA84A003A855E /* PMCollections.swift */,
 				25F9326921781FEC00FC72D6 /* Info.plist */,
 			);
 			path = PMAlgsTests;
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2531F064254CA84A003A855E /* PMCollections.swift in Sources */,
 				25F9326821781FEC00FC72D6 /* PMAlgsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

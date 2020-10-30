@@ -9,19 +9,27 @@
 import Foundation
 
 // Stack implementation
-public class Stack {
-    init() {
-        // Create an empty stack
+public class Stack<Element> {
+    var isEmpty: Bool {
+        stack.isEmpty
     }
+    var size: Int {
+        stack.count
+    }
+    var stack = [Element]()
     
-    func push(item: String) {
+    func push(item: Element) {
         // Push new item onto stack
+        stack.append(item)
     }
     
-    func pop() -> String {
+    func pop() -> Element? {
         // Pop new item off the stack
-        return ""
+        return stack.removeLast()
     }
     
-    
+    func peek() -> Element? {
+        // Return item on top of stack without removing it
+        return stack.last
+    }
 }
