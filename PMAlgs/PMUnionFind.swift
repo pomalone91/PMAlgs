@@ -25,12 +25,10 @@ public class UnionFind {
     }
     
     // Connect p and q
-    public func union(_ p: Int, _ q: Int) throws {
-        try validate(p)
-        try validate(q)
+    public func union(_ p: Int, _ q: Int) /*throws*/ {
         let pID = id[p]
         let qID = id[q]
-        
+
         if pID == qID {         // If p and q have the same id, stop
             return
         }
@@ -47,15 +45,12 @@ public class UnionFind {
     
     // Return true if p and q are connected
     // If p and q are in the same component, id[p] and id[q] will be equal
-    public func connected(p: Int, q: Int) throws -> Bool {
-        try validate(p)
-        try validate(q)
+    public func connected(p: Int, q: Int) /*throws*/ -> Bool {
         return id[p] == id[q]
     }
     
     // Return component ID for p
-    public func find(_ p: Int) throws -> Int {
-        try validate(p)
+    public func find(_ p: Int) /*throws*/ -> Int {
         return id[p]
     }
     
@@ -64,9 +59,10 @@ public class UnionFind {
         return count
     }
     
-    private func validate(_ p: Int) throws {
-        guard p >= 0 || p < id.count else {
-            throw Errors.indexOutOfBounds
-        }
-    }
+//    private func isValid(_ p: Int) -> Bool {
+//        guard p >= 0 || p < id.count else {
+//            return false
+//        }
+//        return true
+//    }
 }
