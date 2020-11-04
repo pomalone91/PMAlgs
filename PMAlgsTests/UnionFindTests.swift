@@ -23,71 +23,36 @@ class PMAlgsTests: XCTestCase {
     
     func testConnected() {
         ufUnderTest = UnionFind(10)
-//        do {
-//            try ufUnderTest.union(1, 4)
-//            print("connected items")
-//        } catch Errors.indexOutOfBounds {
-//            print("Index out of bounds")
-//        } catch {
-//            print("Unexpected Error")
-//        }
         
         ufUnderTest.union(1, 4)
-//        ufUnderTest.union(1, 12)
-        XCTAssert(/*try*/ ufUnderTest.connected(p: 1, q: 4) == true)
-        XCTAssert(/*try*/ ufUnderTest.connected(p: 1, q: 7) == false)
+        XCTAssert(ufUnderTest.connected(p: 1, q: 4) == true)
+        XCTAssert(ufUnderTest.connected(p: 1, q: 7) == false)
     }
 
     func testFind() {
         ufUnderTest = UnionFind(10)
-//        do {
-//            try ufUnderTest.union(1, 4)
-//        } catch Errors.indexOutOfBounds {
-//            print("Index out of bounds")
-//        } catch {
-//            print("Unexpected Error")
-//        }
         ufUnderTest.union(1, 4)
         // 1 should be in 4's component
-        XCTAssert(/*try*/ ufUnderTest.find(1) == 4)
-        XCTAssert(/*try*/ ufUnderTest.find(4) == 4)
-        
-//        do {
-//            try ufUnderTest.union(4, 8)
-//        } catch Errors.indexOutOfBounds {
-//            print("Index out of bounds")
-//        } catch {
-//            print("Unexpected Error")
-//        }
+        XCTAssert(ufUnderTest.find(1) == 4)
+        XCTAssert(ufUnderTest.find(4) == 4)
         
         ufUnderTest.union(4, 8)
         
         // 1 and 4 should now be in 8?
-        XCTAssert(/*try*/ ufUnderTest.find(1) == 8)
-        XCTAssert(/*try*/ ufUnderTest.find(4) == 8)
-        XCTAssert(/*try*/ ufUnderTest.find(8) == 8)
+        XCTAssert(ufUnderTest.find(1) == 8)
+        XCTAssert(ufUnderTest.find(4) == 8)
+        XCTAssert(ufUnderTest.find(8) == 8)
     }
     
     func testCount() {
         ufUnderTest = UnionFind(10)
-//        do {
-            /*try*/ ufUnderTest.union(1, 4)
-            /*try*/ ufUnderTest.union(4, 5)
-//        } catch Errors.indexOutOfBounds {
-//            print("Index out of bounds")
-//        } catch {
-//            print("Unexpected Error")
-//        }
+        ufUnderTest.union(1, 4)
+        ufUnderTest.union(4, 5)
         XCTAssert(ufUnderTest.getCount() == 8)
         
-//        do {
-            /*try*/ ufUnderTest.union(5, 8)
-            /*try*/ ufUnderTest.union(4, 8)
-//        } catch Errors.indexOutOfBounds {
-//            print("Index out of bounds")
-//        } catch {
-//            print("Unexpected Error")
-//        }
+        ufUnderTest.union(5, 8)
+        ufUnderTest.union(4, 8)
+
         XCTAssert(ufUnderTest.getCount() == 7)
     }
 }

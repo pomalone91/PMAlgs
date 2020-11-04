@@ -7,7 +7,12 @@
 //
 
 import Foundation
-
+/*
+ Union find is a way to connect integer components. The index of the array is an identifier and the value at the index is what indicates which connected component that index belongs to. Indices with the same value are connected.
+            Index: [0, 1, 2, 3, 4, 5, 6]
+            Value: [0, 0, 0, 1, 1, 2, 2]
+ Connected Groups: [-------][----][----]
+ */
 public class UnionFind {
     // Properties
     private var count: Int
@@ -59,10 +64,4 @@ public class UnionFind {
         return count
     }
     
-//    private func isValid(_ p: Int) -> Bool {
-//        guard p >= 0 || p < id.count else {
-//            return false
-//        }
-//        return true
-//    }
 }
