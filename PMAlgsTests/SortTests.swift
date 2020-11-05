@@ -24,11 +24,11 @@ class SortTests: XCTestCase {
     
     func testInsertionSort() {
         var arrayToSort = array.shuffled()
-        arrayToSort = insertionSort(array: arrayToSort)
+        arrayToSort = insertionSort(arrayToSort)
         XCTAssertEqual(arrayToSort, array)
         
         var stringsToSort = stringArray.shuffled()
-        stringsToSort = insertionSort(array: stringsToSort)
+        stringsToSort = insertionSort(stringsToSort)
         XCTAssertEqual(stringsToSort, stringArray)
     }
     
@@ -36,7 +36,13 @@ class SortTests: XCTestCase {
         let smallArray = [1]
         let smallerArray = [Int]()
         
-        XCTAssertEqual(insertionSort(array: smallArray), smallArray)
-        XCTAssertEqual(insertionSort(array: smallerArray), smallerArray)
+        XCTAssertEqual(insertionSort(smallArray), smallArray)
+        XCTAssertEqual(insertionSort(smallerArray), smallerArray)
+    }
+    
+    func testSelectionSort() {
+        let arrayToSort = array.shuffled()
+        XCTAssertEqual(selectionSort(arrayToSort), array)
+        XCTAssertEqual(selectionSort(stringArray.shuffled()), stringArray)
     }
 }
