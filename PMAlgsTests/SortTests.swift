@@ -11,6 +11,7 @@ import XCTest
 
 class SortTests: XCTestCase {
     var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
     var stringArray = ["a", "b", "c", "d"]
 
     override func setUp() {
@@ -44,5 +45,17 @@ class SortTests: XCTestCase {
         let arrayToSort = array.shuffled()
         XCTAssertEqual(selectionSort(arrayToSort), array)
         XCTAssertEqual(selectionSort(stringArray.shuffled()), stringArray)
+    }
+    
+    func testShellSort() {
+        XCTAssertEqual(shellSort(array.shuffled()), array)
+        
+        var largeArray = [Int]()
+        
+        for _ in 0..<1000 {
+            largeArray.append(Int.random(in: 0..<1000))
+        }
+        
+        XCTAssertEqual(shellSort(largeArray.shuffled()), largeArray.sorted())
     }
 }
